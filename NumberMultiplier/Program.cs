@@ -9,10 +9,11 @@ namespace NumberMultiplier
             Console.WriteLine("Enter a comma separated string of numbers");
             var userInput = Console.ReadLine();
             var userInputArray = userInput.Split(",");
+
             Console.WriteLine("Multiply these values or square each one individually? Enter 'multiply' or 'square' and then press the Enter key.");
             string multOrSquare = Console.ReadLine();
 
-            if(multOrSquare == "multiply")
+            if (multOrSquare == "multiply")
             {
                 int numberBank = 0;
 
@@ -30,7 +31,7 @@ namespace NumberMultiplier
                 }
                 Console.WriteLine(numberBank);
             }
-            else
+            else if (multOrSquare == "square")
             {
                 string stringToReturn = "";
                 for (int i = 0; i < userInputArray.Length; i++)
@@ -46,6 +47,10 @@ namespace NumberMultiplier
                 }
 
                 Console.WriteLine(stringToReturn);
+            }
+            else
+            {
+                Console.WriteLine("You had 1 job and you screwed it up!!");
             }
 
             Console.WriteLine("Press Enter to Exit");
